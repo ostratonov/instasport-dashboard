@@ -1,0 +1,517 @@
+/* ── Layout ── */
+.db-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+/* ── Sidebar ── */
+.db-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.db-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px 28px;
+}
+
+.db-brand .brand-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.db-brand-text {
+  line-height: 1.2;
+}
+
+.db-brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+.db-brand-sub {
+  font-size: 11px;
+  color: #888;
+  letter-spacing: 0.3px;
+}
+
+.db-nav {
+  flex: 1;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.db-nav-item {
+  display: block;
+  padding: 9px 12px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #555;
+  text-decoration: none;
+  transition: background 0.1s, color 0.1s;
+}
+
+.db-nav-item:hover {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.db-nav-item--active {
+  background: #f0f0f0;
+  color: #111;
+  font-weight: 600;
+}
+
+.db-sidebar-footer {
+  padding: 0 16px;
+}
+
+.db-logout-btn {
+  width: 100%;
+  padding: 11px;
+  background: transparent;
+  color: #888;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.db-logout-btn:hover {
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* ── Main ── */
+.db-main {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.db-content {
+  padding: 32px;
+  flex: 1;
+}
+
+.db-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.db-subtitle {
+  font-size: 13.5px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+/* ── Filter panel ── */
+.db-filter-panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.db-filter-search-wrap {
+  position: relative;
+  flex: 1;
+  max-width: 300px;
+}
+
+.db-filter-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  color: #bbb;
+  pointer-events: none;
+}
+
+.db-filter-search {
+  width: 100%;
+  padding: 8px 12px 8px 32px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 13.5px;
+  color: #111;
+  outline: none;
+  background: #fff;
+}
+
+.db-filter-search:focus {
+  border-color: #999;
+}
+
+.db-select {
+  padding: 8px 30px 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 13.5px;
+  color: #111;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 10px center;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.db-select:focus {
+  border-color: #999;
+}
+
+.db-clear-btn {
+  margin-left: auto;
+  padding: 8px 16px;
+  background: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.db-clear-btn:hover {
+  background: #e5e5e5;
+}
+
+/* ── Table ── */
+.db-table-wrap {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.db-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.db-table thead tr {
+  border-bottom: 1px solid #eee;
+}
+
+.db-table th {
+  text-align: left;
+  padding: 12px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: #999;
+  white-space: nowrap;
+}
+
+.db-th-sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.db-th-sortable:hover {
+  color: #555;
+}
+
+.db-sort-icon {
+  margin-left: 4px;
+  font-size: 11px;
+  color: #555;
+}
+
+.db-sort-icon--idle {
+  color: #ccc;
+}
+
+.db-table tbody tr {
+  border-bottom: 1px solid #f5f5f5;
+  transition: background 0.1s;
+}
+
+.db-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.db-table tbody tr:hover {
+  background: #fafafa;
+}
+
+.db-table td {
+  padding: 14px 20px;
+  font-size: 13.5px;
+  color: #222;
+}
+
+/* ── Member cell ── */
+.db-member-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.db-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.db-member-name {
+  font-weight: 500;
+  color: #111;
+}
+
+/* ── Rank cell ── */
+.db-rank-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.db-belt {
+  display: inline-block;
+  width: 28px;
+  height: 8px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* ── Paid at ── */
+.db-paid-at {
+  color: #555;
+  font-size: 13px;
+}
+
+.db-null {
+  color: #ccc;
+}
+
+/* ── Badge ── */
+.db-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.db-badge--paid {
+  background: #111;
+  color: #fff;
+}
+
+.db-badge--unpaid {
+  background: #f0f0f0;
+  color: #888;
+  border: 1px solid #e0e0e0;
+}
+
+/* ── Actions dropdown ── */
+.db-actions-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.db-actions-btn {
+  padding: 6px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  transition: background 0.1s;
+  white-space: nowrap;
+}
+
+.db-actions-btn:hover {
+  background: #f5f5f5;
+}
+
+.db-caret {
+  font-size: 10px;
+  margin-left: 2px;
+  color: #999;
+}
+
+.db-actions-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.db-actions-menu button {
+  width: 100%;
+  padding: 10px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 13.5px;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.db-actions-menu button:hover {
+  background: #f5f5f5;
+}
+
+.db-menu-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+
+/* ── Empty state ── */
+.db-empty {
+  padding: 48px;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+/* ── Mobile bar (hidden on desktop) ── */
+.db-mobile-bar {
+  display: none;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .db-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease;
+  }
+
+  .db-sidebar--open {
+    transform: translateX(0);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .db-sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 199;
+  }
+
+  .db-mobile-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .db-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .db-hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #111;
+    border-radius: 2px;
+  }
+
+  .db-mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .db-mobile-brand .brand-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .db-content {
+    padding: 20px 16px;
+  }
+
+  .db-title {
+    font-size: 20px;
+  }
+
+  .db-filter-panel {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .db-filter-search-wrap {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .db-select {
+    flex: 1;
+  }
+
+  .db-clear-btn {
+    margin-left: 0;
+    flex-basis: 100%;
+  }
+
+  .db-table {
+    min-width: 560px;
+  }
+}
